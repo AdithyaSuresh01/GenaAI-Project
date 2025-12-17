@@ -1,0 +1,103 @@
+/* --- GLOBAL FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+/* --- MAIN CONTAINER --- */
+.stApp {
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%) !important;
+    background-attachment: fixed !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* --- HIDE HEADER/FOOTER --- */
+header, footer, #MainMenu {visibility: hidden !important;}
+
+/* --- INPUT FIELDS (Global Fix) --- */
+/* Target specific Streamlit Input Wrappers */
+div[data-baseweb="input"], div[data-baseweb="select"] > div {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    border-radius: 8px !important;
+}
+
+/* The actual text input box inside */
+input.stTextInput {
+    background-color: transparent !important;
+    color: white !important;
+}
+
+/* Fix Labels (The text above inputs) */
+label p {
+    color: #e0e0e0 !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+}
+
+/* Dropdown Menu Items */
+ul[data-testid="stSelectboxVirtualDropdown"] {
+    background-color: #0f0c29 !important;
+}
+
+/* --- BUTTONS --- */
+/* Primary (Gradient) */
+button[kind="primary"] {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 700 !important;
+    transition: transform 0.2s !important;
+    width: 100% !important; /* Fix width mismatch */
+}
+button[kind="primary"]:hover {
+    transform: scale(1.02) !important;
+    box-shadow: 0 4px 15px rgba(37, 117, 252, 0.4) !important;
+}
+
+/* Secondary (Glass) */
+button[kind="secondary"] {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #e0e0e0 !important;
+    width: 100% !important;
+}
+button[kind="secondary"]:hover {
+    border-color: #6a11cb !important;
+    background-color: #6a11cb !important;
+    color: white !important;
+}
+
+/* --- EXPANDERS (Roadmap Weeks) --- */
+.streamlit-expanderHeader {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    border-radius: 8px !important;
+}
+/* Fix text color inside expander header */
+.streamlit-expanderHeader p {
+    color: white !important;
+    font-weight: 600 !important;
+}
+/* The content inside the expander */
+div[data-testid="stExpander"] {
+    border: none !important;
+    box-shadow: none !important;
+}
+div[data-testid="stExpander"] p, div[data-testid="stExpander"] li {
+    color: #d1d5db !important;
+}
+
+/* --- ALERTS / INFO BOXES --- */
+div[data-testid="stAlert"] {
+    background-color: rgba(37, 117, 252, 0.1) !important;
+    border: 1px solid rgba(37, 117, 252, 0.3) !important;
+}
+div[data-testid="stAlert"] p {
+    color: #e0e0e0 !important;
+}
+
+/* --- LOADING SPINNER --- */
+.stSpinner > div {
+    border-top-color: #6a11cb !important;
+}
